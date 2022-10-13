@@ -4400,7 +4400,7 @@ sub _valid_name {
     my $attr = shift
         or Carp::croak("sub valid_name requires an attribute name");
 
-    return (0) unless ( $attr =~ /^$START_CHAR$NAME_CHAR+$/ );
+    return (0) unless ( $attr =~ /^$START_CHAR$NAME_CHAR*$/ );
 
     return (1);
 }
